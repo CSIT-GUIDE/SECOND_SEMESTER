@@ -1,0 +1,38 @@
+/*
+	Name: Sagar Giri
+	Roll no. : 0205
+	Date: 25-06-13
+	Description: Program to sort numbers using "Selection sort" method.
+*/
+#include <stdio.h>
+main()
+{
+	int num[5];
+	int i,j,step,temp;
+	
+	printf("enter five numbers for sorting:\n");
+	for(i=0;i<5;i++) 
+	{
+		scanf("%d",&num[i]);
+	}
+	
+	for(step=1;step<=4;step++) 
+	{
+		for(j=step;j<=4;j++) 
+		{
+			if(num[step-1]>num[j]) 
+			{
+				temp=num[step-1];
+				num[step-1]=num[j];
+				num[j]=temp;
+			}
+		}
+	}
+	printf("\n\n\n");
+	printf("sorted numbers are\n");
+	for(j=0;j<5;j++) 
+	{
+		printf("%d \t",num[j]);
+	}
+	getch();
+}
